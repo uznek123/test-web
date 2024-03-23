@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'main.css' %}" />
+    </head>
+    <body>
+    <a href="{% url 'contact' %}">Click to go to contact </a>
+    <a href="{% url 'result' %}">Click to go to result </a>
+
+     <h1>FORMS</h1>
+    
+    <form action="{% url 'result' %}">
+        {% csrf_token %}
+        <input type="text" name="user_input">
+        <input type="submit" value="click me">
+    </form>
+
+    <h1>This is our First Page</h1>
+    <h3> How Awesome</h3>
+
+        <ul>
+            <li>views.py</li>
+            <li>urls.py</li>
+            <li>templates</li>
+            <li>settings.py</li>
+        </ul>
+
+        <img src="{% static 'a.jpg' %}" alt="">
+        
+        <button onclick="buttonFunc()">Click Me</button>
+        <script type="text/javascript" src="{% static 'main.js' %}"> </script>
+    </body>
+</html>
